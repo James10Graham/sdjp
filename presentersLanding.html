@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/index.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Shropshire DJ Podcast</title>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/"><!--<img src="/assets/shropshire djs podcast black alt.png" alt="logo" width="200px">-->SHROPSHIRE DJ PODCAST</a> 
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/presenters">PRESENTERS</a></li>
+        <li><a href="#pricing">GALLERY</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="plxp" style="padding: 0;">
+    <div class="container-fluid">
+        <div class="wtitlepres text-center">
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-2">
+                <a href="/presenters/echo"><img class="presenterImg echo" src="assets/echo.png" alt="echo" width="100%"></a>
+              </div>
+              <div class="col-md-2">
+                <a href="/presenters/dj-double-k"><img class="presenterImg djdk" src="assets/double k.png" alt="djdk" width="100%"></a>
+              </div>
+              <div class="col-md-2">
+                <a href="/presenters/comic-marvel"><img class="presenterImg comic" src="assets/Comic.png" alt="comic" width="100%"></a>
+              </div>
+              <div class="col-md-2">
+                <a href="/presenters/evolve"><img class="presenterImg evolve" src="assets/gold.png" alt="evolve" width="100%"></a>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 text-center">
+                    <h1 style="font-size: 80px !important;">PRESENTERS</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <a href="#about" style="margin: 0 auto; font-size: 40px; margin-top: 20px; cursor: pointer; color: white;"><i class="glyphicon glyphicon-chevron-down"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container-fluid text-center contact" style="background-color: #444; color: white; padding-top: 32px; padding-bottom: 32px;">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <p>Each presenter has a love for music and within the group there is a vast knowledge of musical genre that is enjoyed. Therefore, we bring you some great music. We like the fact that there are three OG’s and one young blud that is able to bring new music to the table.</p>
+      <p>In this collective there are two DJ’s, two Producers and four music loving guys that can talk all day about music. The idea was conjured up by DJ Double K who had the idea and did shows on his own before inviting the rest of the crew to join him.  Once the crew was assembled the show has gone from strength to strength (the more hands the better).</p>
+      <p>Now the show is heard all over the globe and it is still growing with more and more listeners finding us all the time. There are many ways to listen to the show Apple Podcast, Mixcloud, Soundcloud and many more hit the links subscribe and enjoy the shows.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center" style="background-color: #333;">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up" style="font-size: 40px; color: white; margin-top: 32px; margin-bottom: 32px;"></span>
+  </a>
+  <div class="row text-center">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <h3 style="color: white;">INSTAGRAM</h3>
+        <p style="color: white;">Everton Forbes – <a href="#">@e_volve23</a></p>
+        <p style="color: white;">Kevin King – <a href="#">@kingykdj</p></a>
+        <p style="color: white;">Shaquille - <a href="#">@shaquilleforbes</a></p>
+        <p style="color: white;">Comic Marvel - <a href="#">@comicmarvel</a></p>
+      </div>
+  </div>
+</footer>
+</body>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage'], body a[href='#about']").on('click', function(event) {
+
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+</html>

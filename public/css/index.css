@@ -1,0 +1,272 @@
+body, html{
+  background-color: #444;
+  color: white;
+}
+p{
+  font-size: 24px;
+}
+
+.navbar {
+  margin-bottom: 0;
+  background-color: #2d2d30;
+  border: 0;
+  font-size: 11px !important;
+  letter-spacing: 4px;
+  opacity: 0.9;
+  background-color:#29292c !important;
+  transition: all .2s ease-in-out;
+}
+
+/* Add a gray color to all navbar links */
+.navbar li a, .navbar .navbar-brand {
+  color: #d5d5d5 !important;
+}
+
+/* On hover, the links will turn white */
+.navbar-nav li a:hover {
+  color: black !important;
+  background-color:#c2c2c2 !important;
+  opacity: 1;
+
+}
+
+/* The active link */
+.navbar-nav li.active a {
+  color: red !important;
+}
+@media screen and (max-width: 768px) {
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+  }
+}
+
+.plx{
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+        ),
+        /* url(../assets/parallax.jpg) */
+        url(../assets/Telford/IMG_4526.JPG)
+    ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.wtitle{
+  padding: 15% 0;
+  color: white;
+  font-family: Decorative;
+}
+
+.glyphicon-chevron-down:hover, .glyphicon-chevron-up:hover{
+  font-size: 48px !important;
+}
+
+.plx .wtitle .shopBtn{
+  width: 80%;
+  padding: 50px 0;
+  font-size: 32px;
+  background-color: rgb(22, 44, 112);
+  border: 1px solid black;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  border-radius: 15px;
+  opacity: 0.8;
+}
+
+.plx .wtitle .shopBtn:hover{
+  background-color: rgb(157, 130, 71);
+  opacity: 1;
+}
+
+
+.plx2{
+  background:
+      linear-gradient(
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.3)
+      ),
+      /* url(../assets/parallax2.jpg) */
+      url(../assets//Telford/IMG_4057.jpeg)
+  ;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.plx3{
+  background:
+      /* url(../assets/parallax3.jpg) */
+      url(../assets//Telford/IMG_4057.jpeg)
+  ;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.wtitle2{
+  padding: 200px 0;
+  color: white;
+  font-family: Decorative;
+}
+
+.col-md-4{
+  margin-bottom: 40px;
+}
+
+#contact input, #contact textarea{
+  transition: all 0.2s ease-out;
+}
+
+#contact input::placeholder, #contact textarea::placeholder{
+  letter-spacing: 5px;
+}
+
+#contact input:hover, #contact textarea:hover{
+  background-color: rgb(22, 44, 112);
+  color: white !important;
+}
+
+
+/* presenters */
+
+
+.plxp{
+  background:
+      linear-gradient(
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.3)
+      ),
+      /* url(../assets/parallax.jpg) */
+      url(../assets/IMG_0065.JPG)
+  ;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.wtitlepres{
+padding: 15% 0;
+color: white;
+font-family: Decorative;
+}
+
+.glyphicon-chevron-down:hover, .glyphicon-chevron-up:hover{
+font-size: 48px !important;
+}
+
+.presenterImg{
+  opacity: 0.7;
+  transition: all 0.2 ease-in-out;
+}
+
+.presenterImg:hover{
+  opacity: 1;
+}
+
+
+
+
+
+/* echo */
+
+.plxecho{
+  background:
+      linear-gradient(
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.3)
+      ),
+      /* url(../assets/parallax.jpg) */
+      url(../assets/Telford/shaq.JPG)
+  ;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.wtitleecho{
+padding: 15% 0;
+color: white;
+font-family: Decorative;
+}
+
+.glyphicon-chevron-down:hover, .glyphicon-chevron-up:hover{
+font-size: 48px !important;
+}
+
+/* comic */
+
+.plxcomic{
+  background:
+      linear-gradient(
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.3)
+      ),
+      /* url(../assets/parallax.jpg) */
+      url(../assets/Telford/comic.JPG)
+  ;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.wtitlecomic{
+padding: 15% 0;
+color: white;
+font-family: Decorative;
+}
+
+/* djdk */
+
+.plxdjdk{
+  background:
+      linear-gradient(
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.3)
+      ),
+      /* url(../assets/parallax.jpg) */
+      url(../assets/Telford/djdk.JPG)
+  ;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.wtitledjdk{
+padding: 15% 0;
+color: white;
+font-family: Decorative;
+}
+
+/* evolve */
+
+.plxevolve{
+  background:
+      linear-gradient(
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.3)
+      ),
+      /* url(../assets/parallax.jpg) */
+      url(../assets/Telford/evolve.JPG)
+  ;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.wtitleevolve{
+padding: 15% 0;
+color: white;
+font-family: Decorative;
+}
