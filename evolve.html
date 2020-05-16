@@ -15,7 +15,7 @@
     <title>Shropshire DJ Podcast | E-VOLVE</title>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
+  <div id="progressbar"></div>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -29,7 +29,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/presenters">PRESENTERS</a></li>
-        <li><a href="#pricing">GALLERY</a></li>
+        <li><a href="#" onclick="alert('Coming Soon!')">GALLERY</a></li>
       </ul>
     </div>
   </div>
@@ -51,7 +51,7 @@
             </div>
 
             <div class="row">
-                <a href="#about" style="margin: 0 auto; font-size: 40px; margin-top: 20px; cursor: pointer; color: white;"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                <a href="#evolveText" style="margin: 0 auto; font-size: 40px; margin-top: 20px; cursor: pointer; color: white;"><i class="glyphicon glyphicon-chevron-down"></i></a>
             </div>
         </div>
     </div>
@@ -64,9 +64,9 @@
             <p>Although E-Volve plays no music or mixes and blends E-Volve has a very keen ear and is able to express his views eloquently. E-Volve loves old skool classics and some of the latest new artists that have talent. E-Volve when he was much younger had a few shows on a pirate radio station he also used to manage a band known as the Soul Preachers who were destined for big things.</p>
             <p>Music is a big feature in his life and was approached by Double K to get involved in the podcast. Due to other commitments this was not on his radar. After some persuasion became involved with the show. E-Volve is a music visionary and help to propel the show with multiple ideas.</p>
         </div>
-        <div class="col-md-1"></div>
-        <div class="col-md-3">
-          <img src="/assets/gold.png" alt="evolve" width="100%" style="padding-top: 48px;">
+        <!-- <div class="col-md-1"></div> -->
+        <div class="col-md-4">
+          <img src="/assets/evolve2.jpeg" alt="evolve" width="100%" style="padding-top: 48px;">
         </div>
         <div class="col-md-1"></div>
     </div>
@@ -80,9 +80,9 @@
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <h3 style="color: white;">INSTAGRAM</h3>
-        <p style="color: white;">Everton Forbes – <a href="#">@e_volve23</a></p>
-        <p style="color: white;">Kevin King – <a href="#">@kingykdj</p></a>
-        <p style="color: white;">Shaquille - <a href="#">@shaquilleforbes</a></p>
+        <p style="color: white;">Evolve – <a href="#">@e_volve23</a></p>
+        <p style="color: white;">DJ Double K – <a href="#">@kingykdj</p></a>
+        <p style="color: white;">Echo - <a href="#">@shaquilleforbes</a></p>
         <p style="color: white;">Comic Marvel - <a href="#">@comicmarvel</a></p>
       </div>
   </div>
@@ -91,7 +91,7 @@
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage'], body a[href='#about']").on('click', function(event) {
+  $(".navbar a, footer a[href='#myPage'], body a[href='#evolveText']").on('click', function(event) {
 
   // Make sure this.hash has a value before overriding default behavior
   if (this.hash !== "") {
@@ -113,6 +113,33 @@ $(document).ready(function(){
       });
     } // End if
   });
+})
+
+document.addEventListener("DOMContentLoaded", function(){
+    //dom is fully loaded, but maybe waiting on images & css files
+    if(window.innerWidth < 600){
+      document.getElementById("navtitle").innerHTML = "SDJP";
+    }
+    else{
+      document.getElementById("navtitle").innerHTML = "SHROPSHIRE DJ PODCAST";
+    }
+});
+
+function resize(){
+    if(window.innerWidth < 600){
+      document.getElementById("navtitle").innerHTML = "SDJP";
+    }
+    else{
+      document.getElementById("navtitle").innerHTML = "SHROPSHIRE DJ PODCAST";
+    }  
+}
+
+$(window).scroll(()=>{
+  var scroll = $(window).scrollTop(),
+  dh = $(document).height(),
+  wh = $(window).height();
+  scrollPercent = (scroll / (dh-wh)) * 100;
+  $('#progressbar').css('height', scrollPercent + '%');
 })
 </script>
 </html>

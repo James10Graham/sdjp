@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <title>Shropshire DJ Podcast | Echo</title>
+    <title>Shropshire DJ Podcast | Gallery</title>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
   <div id="progressbar"></div>
@@ -29,46 +29,17 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/presenters">PRESENTERS</a></li>
-        <li><a href="#pricing" onclick="alert('Coming Soon!')">GALLERY</a></li>
+        <li><a href="#">GALLERY</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<section class="plxecho" style="padding: 0;">
-    <div class="container-fluid">
-        <div class="wtitleecho text-center">
-            <div class="row">
-              <div class="col-md-2">
-                <img src="" alt="">
-              </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6 text-center">
-                    <h1 style="font-size: 80px !important;">ECHO</h1>
-                </div>
-            </div>
+<div id="gallery" class="container">
 
-            <div class="row">
-                <a href="#echoText" style="margin: 0 auto; font-size: 40px; margin-top: 20px; cursor: pointer; color: white;"><i class="glyphicon glyphicon-chevron-down"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
 
-<div id="echoText" style="background-color: #444;">
-    <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-4">
-          <img src="/assets/echo2.jpeg" alt="echo" width="100%" style="padding-top: 48px;">
-        </div>
-        <!-- <div class="col-md-1"></div> -->
-        <div class="col-md-6">
-            <p style="color:white; padding: 40px 10px;">Echo is a young aspiring Producer/Model his music opinions are very interesting and much wiser than his years. Echo has studied music production at college and his passion for music helped him excel. Echo is one of the presenters on the show and is hoping to get some of his music published. The Can I Flip It feature on the podcast was soley created with Echo in mind to develop his creative side. Echo has a very relaxed demeanour which is highlighted-in his Lofi tracks that he produces. Currently Echo is making beats and is releasing them on Apple Music be sure to check them out.</p>
-        </div>
-    </div>
 </div>
+
 
 <footer class="container-fluid text-center" style="background-color: #333;">
   <a href="#myPage" title="To Top">
@@ -89,7 +60,7 @@
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage'], body a[href='#echoText']").on('click', function(event) {
+  $(".navbar a, footer a[href='#myPage'], body a[href='#about']").on('click', function(event) {
 
   // Make sure this.hash has a value before overriding default behavior
   if (this.hash !== "") {
@@ -112,7 +83,6 @@ $(document).ready(function(){
     } // End if
   });
 })
-
 document.addEventListener("DOMContentLoaded", function(){
     //dom is fully loaded, but maybe waiting on images & css files
     if(window.innerWidth < 600){

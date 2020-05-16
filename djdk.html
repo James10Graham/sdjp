@@ -15,7 +15,7 @@
     <title>Shropshire DJ Podcast | DJ Double K</title>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
+  <div id="progressbar"></div>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -29,7 +29,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/presenters">PRESENTERS</a></li>
-        <li><a href="#pricing">GALLERY</a></li>
+        <li><a href="#" onclick="alert('Coming Soon!')">GALLERY</a></li>
       </ul>
     </div>
   </div>
@@ -51,7 +51,7 @@
             </div>
 
             <div class="row">
-                <a href="#about" style="margin: 0 auto; font-size: 40px; margin-top: 20px; cursor: pointer; color: white;"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                <a href="#djdkText" style="margin: 0 auto; font-size: 40px; margin-top: 20px; cursor: pointer; color: white;"><i class="glyphicon glyphicon-chevron-down"></i></a>
             </div>
         </div>
     </div>
@@ -64,9 +64,9 @@
             <p>Double K is the gentle giant of the crew he is a DJ/Producer and loves playing Funky House. The man is simply a genius it was Double K that started the Shropshire DJ’s Podcast due to his sheer love for all things music. Double K is the spine of the podcast and holds his idea close to heart. Double K mixes in the city of Nottingham and has been known to absolutely rock the venue using seamless mixes and a heavy artillery of non-stop bangers. Double K’s love for music also floods into his creative side and has a keen ear to produce.</p>
             <p>Double K enjoys making music and enjoys the reaction of the crew when he drops his latest track. Double K is very keen to work with up and coming artists in all genres.</p>
         </div>
-        <div class="col-md-1"></div>
-        <div class="col-md-3">
-          <img src="/assets/double k.png" alt="djdk" width="100%" style="padding-top: 48px;">
+        <!-- <div class="col-md-1"></div> -->
+        <div class="col-md-4">
+          <img src="/assets/djdk2.jpeg" alt="djdk" width="100%" style="padding-top: 48px;">
         </div>
         <div class="col-md-1"></div>
     </div>
@@ -80,9 +80,9 @@
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <h3 style="color: white;">INSTAGRAM</h3>
-        <p style="color: white;">Everton Forbes – <a href="#">@e_volve23</a></p>
-        <p style="color: white;">Kevin King – <a href="#">@kingykdj</p></a>
-        <p style="color: white;">Shaquille - <a href="#">@shaquilleforbes</a></p>
+        <p style="color: white;">Evolve – <a href="#">@e_volve23</a></p>
+        <p style="color: white;">DJ Double K – <a href="#">@kingykdj</p></a>
+        <p style="color: white;">Echo - <a href="#">@shaquilleforbes</a></p>
         <p style="color: white;">Comic Marvel - <a href="#">@comicmarvel</a></p>
       </div>
   </div>
@@ -91,7 +91,7 @@
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage'], body a[href='#about']").on('click', function(event) {
+  $(".navbar a, footer a[href='#myPage'], body a[href='#djdkText']").on('click', function(event) {
 
   // Make sure this.hash has a value before overriding default behavior
   if (this.hash !== "") {
@@ -113,6 +113,33 @@ $(document).ready(function(){
       });
     } // End if
   });
+})
+
+document.addEventListener("DOMContentLoaded", function(){
+    //dom is fully loaded, but maybe waiting on images & css files
+    if(window.innerWidth < 600){
+      document.getElementById("navtitle").innerHTML = "SDJP";
+    }
+    else{
+      document.getElementById("navtitle").innerHTML = "SHROPSHIRE DJ PODCAST";
+    }
+});
+
+function resize(){
+    if(window.innerWidth < 600){
+      document.getElementById("navtitle").innerHTML = "SDJP";
+    }
+    else{
+      document.getElementById("navtitle").innerHTML = "SHROPSHIRE DJ PODCAST";
+    }  
+}
+
+$(window).scroll(()=>{
+  var scroll = $(window).scrollTop(),
+  dh = $(document).height(),
+  wh = $(window).height();
+  scrollPercent = (scroll / (dh-wh)) * 100;
+  $('#progressbar').css('height', scrollPercent + '%');
 })
 </script>
 </html>

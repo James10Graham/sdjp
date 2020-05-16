@@ -14,9 +14,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <title>Shropshire DJ Podcast</title>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onresize="resize()">
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<div id="progressbar"></div>
+
+<nav class="navbar navbar-expand-lg navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -24,52 +26,99 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage"><!--<img src="/assets/shropshire djs podcast black alt.png" alt="logo" width="200px">-->SHROPSHIRE DJ PODCAST</a> 
+      <a id="navtitle" class="navbar-brand title" href="#myPage"><!--<img src="/assets/shropshire djs podcast black alt.png" alt="logo" width="200px">-->SHROPSHIRE DJ PODCAST</a> 
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/presenters">PRESENTERS</a></li>
-        <li><a href="#pricing">GALLERY</a></li>
+        <li><a href="#" onclick="alert('Coming Soon!')">GALLERY</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<section class="plx" style="padding: 0;">
-    <div class="container-fluid">
-        <div class="wtitle text-center">
-            <div class="row">
+<section class="plx" style="padding: 0; height: 100vh;">
+    <div class="container-fluid" >
+ <div class="wtitle text-center" style="width: 60vw; height: 30vh; margin: auto;">
+                    <!--<div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-6 text-center">
-                    <h1 style="font-size: 80px !important;">SHROPSHIRE DJ PODCAST</h1>
+                    <h1 style="font-size: 80px !important; width: 90%;">SHROPSHIRE DJ PODCAST</h1>
                 </div>
-                <!-- <div class="col-md-3">
+                <div class="col-md-3">
                     <input class="shopBtn" type="button" value="SHOP" onclick="alert('Coming Soon!')">
+                </div>
+            </div>-->
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+          <h1 style="font-size: 1in !important; margin: auto; font-family: Courier New;">CHECK US OUT!</h1>
+      </div>
+    </div>
+    <div class="row">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+          
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                  <iframe style="margin: auto; width: 100%; height: 30vh; background-color: white;" src="https://www.himalaya.com/en/player-embed/758031" frameborder=0 allowfullscreen></iframe>
+                <!-- <div class="container" style="background-image: url('../assets/sc-rythem.png')">
+
                 </div> -->
-            </div>
+              </div>
+          
+              <div class="item">
+                  <!-- <a href="https://soundcloud.com/user-938662687/shropshire-djs-podcast-ep-3">
+                    <img style="margin: auto; width: 100%; height: 30vh;" src="/assets/sc-rythem.png" alt="Sound Cloud">
+                  </a> -->
+                  <iframe style="margin: auto; width: 100%; height: 30vh;"" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/513169425&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                  
+              </div>
+          
+              <div style="background-color: rgb(38, 41, 44);" class="item mc">
+                  <iframe style="width: 100%; height: 30vh;" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fshropshiredjspodcast%2F" frameborder="0" allowfullscreen></iframe>
+              </div>
 
-            <div class="row text-center" style="margin-top: 32px;">
-                <div class="col-md-3"></div>
-                <div class="col-md-6 text-center">
-                    <iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fuser-938662687&color=white_orange&size=64" style="width: 64px; height: 64px;"></iframe>
-                    <iframe height="460" width="375" src="https://www.himalaya.com/en/player-embed/758031" frameborder=0 allowfullscreen style="background-color: white;"></iframe>
-                    <iframe width="200" height="250" src="https://www.mixcloud.com/widget/follow/?u=%2Fshropshiredjspodcast%2F" frameborder="0" style="border-radius: 10px;"></iframe>
-                </div>
+              <div style="background-color: rgb(38, 41, 44);" class="item" id="also">
+                  <div style="width: 100%; height: 30vh;" class="container">
+                    <div class="row" style="margin-bottom: 5px;">
+                      <div class="col-md-3"></div>
+                      <div class="col-md-6">
+                        <h3 style="font-family: Courier New; font-size: 0.3in;">We Also Use:</h3>
+                        <a href="https://pca.st/96qfm0tr"><img id="pct" src="/assets/logos/pocketcasts.png" alt="pocketcast"></a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-5"></div>
+                      <div class="col-md-2">
+                          <a href="https://podcast.app/shropshire-djs-podcast-p547003/?utm_source=ios&utm_medium=share"><img class="smallImg" height="60px" src="/assets/logos/ThePodcastApp-icon.png" alt=""></a>
+                      
+                          <a href="https://overcast.fm/itunes1437752194/shropshire-djs-podcast"><img class="smallImg" style="height: 60px;" src="/assets/logos/Overcast.png" alt=""></a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
             </div>
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <a href="https://overcast.fm/itunes1437752194/shropshire-djs-podcast"><img src="assets/logos/overcast.png" alt="apple podcast" width="64"></a>
-                    <a href="https://podcasts.apple.com/gb/podcast/shropshire-djs-podcast/id1437752194"><img src="assets/logos/pocketcasts.png" alt="apple podcast" height="64"></a>
-                    <a href="https://podcast.app/shropshire-djs-podcast-p547003/?utm_source=ios&utm_medium=share"><img src="assets/logos/ThePodcastApp-icon.png" alt="apple podcast" height="64"></a>
-                </div>
-            </div>
-
-            <div class="row">
-                <a href="#about" style="margin: 0 auto; font-size: 40px; margin-top: 20px; cursor: pointer; color: white;"><i class="glyphicon glyphicon-chevron-down"></i></a>
-            </div>
-        </div>
+          
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div></div>
     </div>
 </section>
 
@@ -158,13 +207,14 @@
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <h3 style="color: white;">INSTAGRAM</h3>
-        <p style="color: white;">Everton Forbes – <a href="#">@e_volve23</a></p>
-        <p style="color: white;">Kevin King – <a href="#">@kingykdj</p></a>
-        <p style="color: white;">Shaquille - <a href="#">@shaquilleforbes</a></p>
+        <p style="color: white;">Evolve – <a href="#">@e_volve23</a></p>
+        <p style="color: white;">DJ Double K – <a href="#">@kingykdj</p></a>
+        <p style="color: white;">Echo - <a href="#">@shaquilleforbes</a></p>
         <p style="color: white;">Comic Marvel - <a href="#">@comicmarvel</a></p>
       </div>
   </div>
 </footer>
+
 </body>
 <script>
 $(document).ready(function(){
@@ -192,5 +242,34 @@ $(document).ready(function(){
     } // End if
   });
 })
+
+document.addEventListener("DOMContentLoaded", function(){
+    //dom is fully loaded, but maybe waiting on images & css files
+    if(window.innerWidth < 600){
+      document.getElementById("navtitle").innerHTML = "SDJP";
+    }
+    else{
+      document.getElementById("navtitle").innerHTML = "SHROPSHIRE DJ PODCAST";
+    }
+});
+
+function resize(){
+    if(window.innerWidth < 600){
+      document.getElementById("navtitle").innerHTML = "SDJP";
+    }
+    else{
+      document.getElementById("navtitle").innerHTML = "SHROPSHIRE DJ PODCAST";
+    }  
+}
+
+$(window).scroll(()=>{
+  var scroll = $(window).scrollTop(),
+  dh = $(document).height(),
+  wh = $(window).height();
+  scrollPercent = (scroll / (dh-wh)) * 100;
+  $('#progressbar').css('height', scrollPercent + '%');
+})
+
+
 </script>
 </html>
