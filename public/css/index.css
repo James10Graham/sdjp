@@ -1,18 +1,32 @@
 body, html{
   background-color: #444;
   color: white;
+  overflow: auto;
+  font-family: 'Courier New' !important;
 }
 p{
   font-size: 24px;
 }
 
+::-webkit-scrollbar{
+  width: 0 !important;
+}
+#progressbar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15px;
+  border-radius: 10px;
+  background: linear-gradient(to top, #fcb045, #fd1d1d, #833ab4);
+}
+
+
 .navbar {
   margin-bottom: 0;
-  background-color: #2d2d30;
-  border: 0;
-  font-size: 11px !important;
+  /* background-color: #2d2d30; */
+  font-size: 14px !important;
   letter-spacing: 4px;
-  opacity: 0.9;
+  opacity: 0.8;
   background-color:#29292c !important;
   transition: all .2s ease-in-out;
 }
@@ -29,7 +43,6 @@ p{
   opacity: 1;
 
 }
-
 /* The active link */
 .navbar-nav li.active a {
   color: red !important;
@@ -39,6 +52,58 @@ p{
     text-align: center;
     margin: 25px 0;
   }
+
+  .plx .container-fluid .wtitle{
+    width: 90% !important;
+    vertical-align: middle !important;
+  }
+
+  .plx{
+    background:
+        /* url(../assets/parallax.jpg) */
+        url('../assets/mixer-4197730_1920.jpg')
+    !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+    height: 100vh;
+
+}
+
+.plx2{
+  background:
+      linear-gradient(
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.3)
+      ),
+      /* url(../assets/parallax2.jpg) */
+      url(../assets/dj_headphones_installation_122020_1280x720.jpg)
+  !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+}
+
+#progressbar{
+  width: 5px !important;
+}
+
+.presenterImg{
+  width: 50vw;
+}
+
+#also .row h3{
+  font-size: 0.2in !important;
+}
+
+#also #pct, #also .smallImg{
+  height: 40px !important;
+}
+
+
+
 }
 
 .plx{
@@ -48,12 +113,13 @@ p{
             rgba(0, 0, 0, 0.3)
         ),
         /* url(../assets/parallax.jpg) */
-        url(../assets/Telford/IMG_4526.JPG)
+        url('../assets/iCloud\ Photos\ from\ Everton\ Forbes/IMG_2852.JPG')
     ;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    height: 100vh;
 }
 
 .wtitle{
@@ -99,16 +165,7 @@ p{
   background-repeat: no-repeat;
 }
 
-.plx3{
-  background:
-      /* url(../assets/parallax3.jpg) */
-      url(../assets//Telford/IMG_4057.jpeg)
-  ;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
+
 
 .wtitle2{
   padding: 200px 0;
@@ -150,6 +207,7 @@ p{
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .wtitlepres{
@@ -163,12 +221,12 @@ font-size: 48px !important;
 }
 
 .presenterImg{
-  opacity: 0.7;
-  transition: all 0.2 ease-in-out;
+  /* opacity: 0.7; */
+  transition: all 0.2s;
 }
 
 .presenterImg:hover{
-  opacity: 1;
+  transform: scale(1.2)
 }
 
 
@@ -184,12 +242,13 @@ font-size: 48px !important;
           rgba(0, 0, 0, 0.3)
       ),
       /* url(../assets/parallax.jpg) */
-      url(../assets/Telford/shaq.JPG)
+      url(../assets/iCloud\ Photos\ from\ Everton\ Forbes/echocolour.JPG)
   ;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .wtitleecho{
@@ -211,12 +270,13 @@ font-size: 48px !important;
           rgba(0, 0, 0, 0.3)
       ),
       /* url(../assets/parallax.jpg) */
-      url(../assets/Telford/comic.JPG)
+      url(../assets/iCloud\ Photos\ from\ Everton\ Forbes/comiccolour.JPG)
   ;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .wtitlecomic{
@@ -234,12 +294,13 @@ font-family: Decorative;
           rgba(0, 0, 0, 0.3)
       ),
       /* url(../assets/parallax.jpg) */
-      url(../assets/Telford/djdk.JPG)
+      url(../assets/iCloud\ Photos\ from\ Everton\ Forbes//DJDKcolour.JPG)
   ;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .wtitledjdk{
@@ -257,12 +318,13 @@ font-family: Decorative;
           rgba(0, 0, 0, 0.3)
       ),
       /* url(../assets/parallax.jpg) */
-      url(../assets/Telford/evolve.JPG)
+      url(../assets/evolve2.JPG)
   ;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .wtitleevolve{
